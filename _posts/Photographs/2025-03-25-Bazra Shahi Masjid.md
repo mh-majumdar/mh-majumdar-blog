@@ -5,7 +5,7 @@ date: 2025-03-25
 categories:
   - photography
 tags: photography
-image: /mh-majumdar-blog/assets/images/Cover.jpg
+image: /assets/images/Cover.jpg
 excerpt: "A tale of light and legacy — uncovering the elegance of Bazra Shahi Masjid during the golden hour."
 comments: true
 ---
