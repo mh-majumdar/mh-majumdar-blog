@@ -125,19 +125,7 @@ layout: post
 
             <!-- Share Icons -->
             <div class="share-icons mt-4">
-                {% assign full_url = site.url | append: page.url %}
-                <a href="https://www.facebook.com/sharer/sharer.php?u={{ full_url }}" target="_blank"
-                    title="Share on Facebook">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://twitter.com/intent/tweet?url={{ full_url }}&text={{ page.title }}" target="_blank"
-                    title="Share on Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="mailto:?subject={{ page.title }}&body=Check out this post: {{ full_url }}"
-                    title="Share via Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
+                {% include share.html %}
             </div>
 
         </div>
