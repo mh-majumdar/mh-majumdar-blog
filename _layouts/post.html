@@ -9,25 +9,24 @@ layout: default
     <meta charset="UTF-8">
     <title>{{ page.title }} | {{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
     {% if page.css %}
     <link rel="stylesheet" href="{{ page.css }}">
     {% endif %}
-
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines }}" />
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-    <meta property="og:image" content="{{ site.url }}{{ page.image }}" />
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.image }}" />
+    <meta property="og:image:alt" content="{{ page.title }}" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ page.title }}" />
     <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines }}" />
-    <meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />
-
+    <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}{{ page.image }}" />
 
     <style>
         .post-hero {
@@ -75,14 +74,14 @@ layout: default
             {% if page.tags %}
             <div class="mt-3">
                 {% for tag in page.tags %}
-                <a href="/tags/#{{ tag | slugify }}" class="tag-pill">#{{ tag }}</a>
+                <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}" class="tag-pill">#{{ tag }}</a>
                 {% endfor %}
             </div>
             {% endif %}
 
             <!-- Share Icons -->
             <div class="share-icons mt-4">
-                {% assign full_url = site.url | append: page.url %}
+                {% assign full_url = site.url | append: site.baseurl | append: page.url %}
                 <a href="https://www.facebook.com/sharer/sharer.php?u={{ full_url }}" target="_blank"
                     title="Share on Facebook">
                     <i class="fab fa-facebook"></i>
@@ -111,8 +110,6 @@ layout: default
             </div>
         </div>
     </section>
-
-
 
     <!-- Font Awesome for Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
