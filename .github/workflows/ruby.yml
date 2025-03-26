@@ -2,36 +2,37 @@ name: Ruby
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 permissions:
   contents: read
 
 jobs:
   test:
-    runs-on: ubuntu-22.04  # Ensure using a newer Ubuntu version
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
-        ruby-version: ['3.1.0', '3.2.0', '3.3.0']
+        ruby-version: ["3.1.0", "3.2.0", "3.3.0"]
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: ${{ matrix.ruby-version }}
-        bundler-cache: true
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: true
 
-    - name: Update RubyGems to latest version
-      run: |
-        gem update --system 3.3.22  # Update RubyGems to required version
+      - name: Update RubyGems
+        run: gem update --system
 
-    - name: Install dependencies
-      run: |
-        bundle install --jobs 4
+      - name: Install dependencies
+        run: bundle install --jobs 4 --retry 3
 
-    - name: Run tests
-      run: bundle exec rake
+      - name: Normalize Gemfile.lock platforms
+        run: bundle lock --normalize-platforms
+
+      - name: Run tests
+        run: bundle exec rake
