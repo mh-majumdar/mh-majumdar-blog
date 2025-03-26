@@ -7,7 +7,8 @@
 
     <!-- Conditionally link to a custom CSS file -->
     {% if page.css %}
-    <link rel="stylesheet" href="{{ page.css }}">
+    <!-- Apply the CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl }}{{ page.css }}">
     {% endif %}
 
     <!-- Other common CSS files -->
