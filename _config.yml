@@ -34,8 +34,10 @@ plugins:
 plugins:
   - jekyll-paginate
 
-paginate: 9  # posts per page
+paginate: 10  # posts per page
 paginate_path: "/all-posts/page:num/"
+permalink: /blog/:year/:month/:day/:title/
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
