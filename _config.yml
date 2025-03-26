@@ -36,7 +36,8 @@ plugins:
 
 paginate: 10  # posts per page
 paginate_path: "/all-posts/page:num/"
-permalink: /blog/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
