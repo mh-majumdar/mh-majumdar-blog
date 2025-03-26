@@ -155,10 +155,12 @@ PLATFORMS
   arm-linux-musl
   arm-linux-musleabihf
   arm64-darwin
+  ffi-unknown
   riscv64-linux-android
   riscv64-linux-gnu
   riscv64-linux-musl
   ruby
+  sass-unknown
   x64-mingw-ucrt
   x86-linux
   x86-linux-gnu
