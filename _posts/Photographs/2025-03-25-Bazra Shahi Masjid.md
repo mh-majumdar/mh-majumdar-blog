@@ -8,7 +8,7 @@ tags: photography
 <img src="{{ site.baseurl }}/assets/images/Cover.jpg" alt="Cover Image">
 excerpt: "A tale of light and legacy — uncovering the elegance of Bazra Shahi Masjid during the golden hour."
 comments: true
-permalink: /blog/:year/:month/:day/:title/
+
 ---
 
 <div style="text-align: center; margin-bottom: 30px;">
