@@ -79,7 +79,9 @@ css: /assets/css/blog.css
                             {{ post.excerpt | strip_html | truncatewords: 20 }}
                         </p>
                         <div class="d-flex justify-content-between align-items-center mt-2">
-                            <a href="{{ post.url }}" class="btn btn-outline-primary btn-sm">Read More</a>
+                            <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-outline-primary btn-sm">Read
+                                More</a>
+
                             {% if post.tags %}
                             <div class="text-muted small">
                                 <i class="bi bi-tags me-1"></i>

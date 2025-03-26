@@ -11,7 +11,7 @@ comments: true
 ---
 
 <div style="text-align: center; margin-bottom: 30px;">
-  <img src="/assets/images/Cover.jpg" alt="Bazra Shahi Masjid"
+  <img src="/mh-majumdar-blog/assets/images/Cover.jpg" alt="Bazra Shahi Masjid"
        style="max-width: 1000px; height: 500px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); display: block; margin: 0 auto;" />
   <p style="font-style: italic; color: #666; margin-top: 10px;">Golden hour at Bazra Shahi Masjid, Comilla</p>
 </div>
