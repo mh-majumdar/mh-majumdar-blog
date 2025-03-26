@@ -36,7 +36,7 @@ plugins:
 
 paginate: 10  # posts per page
 paginate_path: "/all-posts/page:num/"
-permalink: /mh-majumdar-blog/blog/:year/:month/:day/:title/
+permalink: /blog/:year/:month/:day/:title/
 
 
 # Exclude from processing.
