@@ -15,99 +15,102 @@ layout: default
     <link rel="stylesheet" href="{{ page.css }}">
     {% endif %}
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ page.title }}" />
-    <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | escape }}" />
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <<<<<<< HEAD <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="{{ page.title }}" />
+        <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | escape }}" />
+        <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 
-    {% if page.image %}
-    <meta property="og:image" content="{{ site.url }}{{ page.image }}" />
-    <meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />
-    {% else %}
-    <meta property="og:image" content="{{ site.url }}/assets/images/default-og.jpg" />
-    <meta name="twitter:image" content="{{ site.url }}/assets/images/default-og.jpg" />
-    {% endif %}
+        {% if page.image %}
+        <meta property="og:image" content="{{ site.url }}{{ page.image }}" />
+        <meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />
+        {% else %}
+        <meta property="og:image" content="{{ site.url }}/assets/images/default-og.jpg" />
+        <meta name="twitter:image" content="{{ site.url }}/assets/images/default-og.jpg" />
+        {% endif %}
 
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{{ page.title }}" />
-    <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | escape }}" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="{{ page.title }}" />
+        <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | escape }}" />
+        =======
+
+        >>>>>>> 0650acf9c7fc0994c7235a073c39dfd4d62b1dca
 
 
 
-    <style>
-        .post-hero {
-            min-height: 60vh;
-            background-color: rgb(19, 50, 103);
-            position: relative;
-            padding-top: 80px;
-            padding-bottom: 40px;
-            display: flex;
-            align-items: center;
-            text-align: center;
-        }
+        <style>
+            .post-hero {
+                min-height: 60vh;
+                background-color: rgb(19, 50, 103);
+                position: relative;
+                padding-top: 80px;
+                padding-bottom: 40px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+            }
 
-        .post-hero h1 {
-            font-size: 2.5rem;
-        }
-
-        @media (max-width: 576px) {
             .post-hero h1 {
-                font-size: 1.8rem;
+                font-size: 2.5rem;
             }
-        }
 
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            z-index: 1;
-        }
+            @media (max-width: 576px) {
+                .post-hero h1 {
+                    font-size: 1.8rem;
+                }
+            }
 
-        .post-hero .container {
-            position: relative;
-            z-index: 2;
-        }
+            .overlay {
+                background-color: rgba(0, 0, 0, 0.5);
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                z-index: 1;
+            }
 
-        .tag-pill {
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 4px 12px;
-            margin: 4px;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            display: inline-block;
-            color: white;
-            text-decoration: none;
-        }
+            .post-hero .container {
+                position: relative;
+                z-index: 2;
+            }
 
-        .share-icons a {
-            color: white;
-            margin: 0 10px;
-            font-size: 1.5rem;
-            transition: 0.3s;
-        }
+            .tag-pill {
+                background-color: rgba(255, 255, 255, 0.2);
+                padding: 4px 12px;
+                margin: 4px;
+                border-radius: 20px;
+                font-size: 0.875rem;
+                display: inline-block;
+                color: white;
+                text-decoration: none;
+            }
 
-        .share-icons a:hover {
-            color: #ccc;
-        }
+            .share-icons a {
+                color: white;
+                margin: 0 10px;
+                font-size: 1.5rem;
+                transition: 0.3s;
+            }
 
-        .content-wrapper {
-            padding: 2rem 1rem;
-        }
+            .share-icons a:hover {
+                color: #ccc;
+            }
 
-        @media (min-width: 768px) {
             .content-wrapper {
-                padding: 3rem;
+                padding: 2rem 1rem;
             }
-        }
-    </style>
+
+            @media (min-width: 768px) {
+                .content-wrapper {
+                    padding: 3rem;
+                }
+            }
+        </style>
 </head>
 
 <body>
