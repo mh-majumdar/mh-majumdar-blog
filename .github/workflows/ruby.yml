@@ -11,22 +11,27 @@ permissions:
 
 jobs:
   test:
-
-    runs-on: ubuntu-22.04  # ✅ Use a supported GitHub-hosted runner
-
+    runs-on: ubuntu-22.04  # Ensure using a newer Ubuntu version
     strategy:
       matrix:
-        ruby-version: ['3.1.0', '3.2.0', '3.3.0']  # Update ruby-version to >=3.1.0
-
+        ruby-version: ['3.1.0', '3.2.0', '3.3.0']
 
     steps:
     - uses: actions/checkout@v4
 
     - name: Set up Ruby
-      uses: ruby/setup-ruby@v1  # ✅ Use stable version instead of commit hash
+      uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true
+
+    - name: Update RubyGems to latest version
+      run: |
+        gem update --system 3.3.22  # Update RubyGems to required version
+
+    - name: Install dependencies
+      run: |
+        bundle install --jobs 4
 
     - name: Run tests
       run: bundle exec rake
