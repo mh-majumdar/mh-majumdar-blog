@@ -6,6 +6,20 @@ layout: default
 <html lang="en">
 
 <head>
+    {% if page.thumbnail %}
+    <meta property="og:image" content="{{ page.thumbnail | absolute_url }}">
+    <meta name="twitter:image" content="{{ page.thumbnail | absolute_url }}">
+    {% else %}
+    <meta property="og:image" content="{{ site.url }}/assets/images/default-logo.jpg">
+    <meta name="twitter:image" content="{{ site.url }}/assets/images/default-logo.jpg">
+    {% endif %}
+
+    <!-- Essential Tags -->
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta name="twitter:card" content="summary_large_image">
+
     <meta charset="UTF-8">
     <title>{{ page.title }} | {{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,18 +29,7 @@ layout: default
     <link rel="stylesheet" href="{{ page.css }}">
     {% endif %}
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ page.title }}" />
-    <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines }}" />
-    <meta property="og:url" content="{{ page.url | absolute_url }}" />
-    <meta property="og:image" content="{{ page.thumbnail | absolute_url }}" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{{ page.title }}" />
-    <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines }}" />
-    <meta name="twitter:image" content="{{ page.thumbnail | absolute_url }}" />
 
 
 
