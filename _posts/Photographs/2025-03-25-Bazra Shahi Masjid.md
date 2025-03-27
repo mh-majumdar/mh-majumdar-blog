@@ -18,7 +18,7 @@ comments: true
 </div>
 
 ---
-<div style="text-align: justify;">
+
   
 ## 🕌 Mughal Majesty: Bazra Shahi Masjid
 
@@ -37,5 +37,5 @@ The Shahi Mosque, located in Bajra Union of Sonaimuri Upazila, Noakhali District
   
 
 > The photograph captures more than a building—it captures a **moment** where **light, history, and architecture** converge.
-</div>
+
 ---
