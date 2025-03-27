@@ -46,6 +46,9 @@ layout: default
             align-items: center;
             text-align: center;
         }
+        .justify-text p {
+    text-align: justify;
+}
 
         .post-hero h1 {
             font-size: 2.5rem;
@@ -147,17 +150,17 @@ layout: default
     </section>
 
     <!-- Post Content Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-9 col-md-10 col-sm-11 col-12">
-                    <div class="bg-white p-4 rounded shadow-sm content-wrapper">
-                        {{ content }}
-                    </div>
+   <section class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 col-md-10 col-sm-11 col-12">
+                <div class="bg-white p-4 rounded shadow-sm content-wrapper justify-text">
+                    {{ content }}
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Font Awesome for Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
