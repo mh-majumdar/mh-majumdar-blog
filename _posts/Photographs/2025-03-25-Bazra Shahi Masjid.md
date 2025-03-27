@@ -33,7 +33,7 @@ The Shahi Mosque, located in Bajra Union of Sonaimuri Upazila, Noakhali District
 
 - **Camera**: Canon EOS 250D
 - **Lens**: Canon 50mm f/1.8
-- **Settings**: f/8, 1/60s, ISO 100
+  
 
 > The photograph captures more than a building—it captures a **moment** where **light, history, and architecture** converge.
 
